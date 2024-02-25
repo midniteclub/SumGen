@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Summary Generator</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+        }
+        .container {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #333;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+        input[type=file], input[type=submit], input[type=radio] {
+            margin: 10px 0;
+        }
+        label {
+            margin: 10px 0;
+        }
+        /* Spinner Styles */
+        .spinner {
+            display: none;
+            border: 5px solid #f3f3f3;
+            border-top: 5px solid #3498db;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            animation: spin 1s linear infinite;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin: -25px 0 0 -25px;
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Upload .pdf, .docx, or .txt </h1>
+        {% if error %}
+            <div style="color: red;">{{ error }}</div>
+        {% endif %}
+        <form id="uploadForm" action="/" method="post" enctype="multipart/form-data">
+            <input type="file" name="file" accept=".pdf,.docx,.txt" required>
+            <div>
+                <label><input type="radio" name="summary_length" value="short" checked> Short </label>
+                <label><input type="radio" name="summary_length" value="medium"> Medium </label>
+                <label><input type="radio" name="summary_length" value="long"> Long Summary </label>
+            </div>
+            <input type="submit" value="Generate Summary">
+        </form>
+        <div class="spinner" id="spinner"></div>
+    </div>
+    <script>
+        document.getElementById('uploadForm').onsubmit = function() {
+            document.getElementById('spinner').style.display = 'block';
+        };
+    </script>
+</body>
+</html>
