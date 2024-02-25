@@ -1,0 +1,2 @@
+*.bin filter=lfs diff=lfs merge=lfs -text
+C:/Users/gaiag/OneDrive/Documents/GitHub/SumGen/tuned_model/pytorch_model.bin filter=lfs diff=lfs merge=lfs -text
