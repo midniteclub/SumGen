@@ -13,11 +13,15 @@ INSTALLATION:
 -------------
 To run this app, you need Python 3.6+ and pip installed on your system.
 
-1. Clone the Repository:
+1. Clone the Repository (Git Bash):
 
 `git clone https://github.com/midniteclub/SumGen.git`
 
 `cd SumGen`
+
+Or download directly via GitHub, extract SumGen-main, and locate on terminal/cmd:
+
+`cd path/to/SumGen-main`
 
 
 2. Set Up a Virtual Environment (Optional but recommended):
