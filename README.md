@@ -69,18 +69,6 @@ Adding File Types: Support for additional file types can be added by implementin
 
 
 
-CONTRIBUTING:
--------------
-Contributions to improve the app or extend its functionality are welcome. Please follow the standard fork, branch, and pull request workflow.
-
-
-
-LICENSE:
--------------
-Apache-2.0
-
-
-
 TECHNICAL DETAILS:
 ------------------
 
@@ -131,3 +119,13 @@ Model Serving: The fine-tuned model was integrated into the Flask application, a
 Future Work: Explore further model improvements, including experimenting with different datasets, model architectures, and training strategies.
 
 
+
+CONTRIBUTING:
+-------------
+Contributions to improve the app or extend its functionality are welcome. Please follow the standard fork, branch, and pull request workflow.
+
+
+
+LICENSE:
+-------------
+Apache-2.0
