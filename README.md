@@ -16,13 +16,17 @@ To run this app, you need Python 3.6+ and pip installed on your system.
 1. Clone the Repository:
 
 git clone https://github.com/midniteclub/SumGen.git
+
 cd SumGen
 
 
 2. Set Up a Virtual Environment (Optional but recommended):
 
 python -m venv venv
-source venv/bin/activate  # On Windows, use `venv\Scripts\activate`
+
+source venv/bin/activate  
+
+# On Windows, use `venv\Scripts\activate`
 
 
 3. Install Required Packages:
