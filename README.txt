@@ -13,11 +13,15 @@ INSTALLATION:
 -------------
 To run this app, you need Python 3.6+ and pip installed on your system.
 
-1. Clone the Repository:
+1. Clone the Repository (Git Bash):
 
 `git clone https://github.com/midniteclub/SumGen.git`
 
 `cd SumGen`
+
+Or download directly via GitHub, extract SumGen-main, and locate on terminal/cmd (replace `path/to/` with the actual path):
+
+`cd path/to/SumGen-main`
 
 
 2. Set Up a Virtual Environment (Optional but recommended):
@@ -62,18 +66,6 @@ CUSTOMIZATION:
 Model Tuning: The summarization model's performance can be tuned by adjusting parameters in the generate_summary function.
 
 Adding File Types: Support for additional file types can be added by implementing new extraction functions.
-
-
-
-CONTRIBUTING:
--------------
-Contributions to improve the app or extend its functionality are welcome. Please follow the standard fork, branch, and pull request workflow.
-
-
-
-LICENSE:
--------------
-Apache-2.0
 
 
 
@@ -126,4 +118,15 @@ Model Serving: The fine-tuned model was integrated into the Flask application, a
 
 Future Work: Explore further model improvements, including experimenting with different datasets, model architectures, and training strategies.
 
+
+
+CONTRIBUTING:
+-------------
+Contributions to improve the app or extend its functionality are welcome. Please follow the standard fork, branch, and pull request workflow.
+
+
+
+LICENSE:
+-------------
+Apache-2.0
 
