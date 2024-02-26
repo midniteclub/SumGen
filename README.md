@@ -19,7 +19,7 @@ To run this app, you need Python 3.6+ and pip installed on your system.
 
 `cd SumGen`
 
-Or download directly via GitHub, extract SumGen-main, and locate on terminal/cmd:
+Or download directly via GitHub, extract SumGen-main, and locate on terminal/cmd (replace `path/to/SumGen-main` with the actual path):
 
 `cd path/to/SumGen-main`
 
