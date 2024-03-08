@@ -115,9 +115,9 @@ def upload_file():
         else:
             error_message = "Unsupported file type."
                 
-        return render_template('summary2.html', summary=summary, image_data=image_data, error=error_message)
+        return render_template('summary.html', summary=summary, image_data=image_data, error=error_message)
 
-    return render_template('upload2.html', error=error_message)
+    return render_template('upload.html', error=error_message)
 
 
 if __name__ == '__main__':
