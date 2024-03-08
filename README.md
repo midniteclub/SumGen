@@ -6,7 +6,10 @@ Features
 
     File upload support for PDF, DOCX, and TXT formats.
     Options for generating short, medium, and long summaries.
-    User-friendly web interface with error handling for unsupported file types or extraction issues.
+    Multiple model options for summary generation.
+    Story visualization for generated summaries.
+
+![SCREENSHOT](https://github.com/midniteclub/SumGen/assets/57697320/1586d643-bdee-4ff3-9728-9ddafbc2e609)
 
 
 INSTALLATION:
@@ -53,9 +56,13 @@ USAGE:
 -------------
 Upload a File: Navigate to the main page and upload a PDF, DOCX, or TXT file using the file selection input.
 
+Choose Model: Able to use the fine-tuned xsum bart model or Pegasus-xsum language model.
+
 Choose Summary Length: Select the desired summary length (Short, Medium, or Long).
 
 Generate Summary: Click the "Generate Summary" button. If the file is valid and text can be extracted, you will be redirected to a page displaying the generated summary.
+
+[NEW] Generate Image: Option to visualize summary via Stable Diffusion (takes a few minutes)!
 
 Error Handling: If the file type is unsupported or text extraction fails, you will be notified to try another file.
 
@@ -110,13 +117,39 @@ Performance Evaluation: Post-retraining, observed significant improvements in th
 
 
 
+ROUGE METRICS:
+--------------
+Rouge Scores (before tuning on small xsum subset):
+
+- rouge1: 0.3532
+- rouge2: 0.1463
+- rougeL: 0.2693
+- rougeLsum: 0.2693
+
+Rouge scores (after tuning):
+
+- rouge1: 0.3722
+- rouge2: 0.1600
+- rougeL: 0.2850
+- rougeLsum: 0.2848
+
+
+Pegasus Rouge scores on xsum test set (https://huggingface.co/google/pegasus-xsum)
+(self-reported):
+- rouge1: 46.862
+- rouge2: 24.453
+- rougeL: 39.055
+- rougeLsum: 39.099
+
+
+
 Additional Considerations:
 --------------------------
 Computational Resources: Training and hyperparameter optimization were computationally intensive processes, conducted on GPU-accelerated hardware to expedite the experiments.
 
 Model Serving: The fine-tuned model was integrated into the Flask application, allowing users to generate summaries through a user-friendly web interface.
 
-Future Work: Explore further model improvements, including experimenting with different datasets, model architectures, and training strategies.
+Future Work: Explore further model improvements (larger training data with further hyper parameter tuning, including experimenting with different datasets, model architectures, and training strategies.
 
 
 
@@ -127,5 +160,27 @@ Contributions to improve the app or extend its functionality are welcome. Please
 
 
 LICENSE:
--------------
+----------
 Apache-2.0
+
+
+
+REFERENCES:
+-----------
+@misc{zhang2019pegasus,
+    title={PEGASUS: Pre-training with Extracted Gap-sentences for Abstractive Summarization},
+    author={Jingqing Zhang and Yao Zhao and Mohammad Saleh and Peter J. Liu},
+    year={2019},
+    eprint={1912.08777},
+    archivePrefix={arXiv},
+    primaryClass={cs.CL}
+}
+
+@misc{von-platen-etal-2022-diffusers,
+  author = {Patrick von Platen and Suraj Patil and Anton Lozhkov and Pedro Cuenca and Nathan Lambert and Kashif Rasul and Mishig Davaadorj and Thomas Wolf},
+  title = {Diffusers: State-of-the-art diffusion models},
+  year = {2022},
+  publisher = {GitHub},
+  journal = {GitHub repository},
+  howpublished = {\url{https://github.com/huggingface/diffusers}}
+}
