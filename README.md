@@ -42,6 +42,9 @@ On Windows, use: `venv\Scripts\activate`
 
 `pip install -r requirements.txt`
 
+or
+
+`python -m pip install -r requirements.txt` (if necessary)
 
 4. Run the Application:
 
