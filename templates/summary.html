@@ -23,15 +23,11 @@
         h1 {
             color: #333;
         }
-        form {
-            display: flex;
-            flex-direction: column;
-        }
-        input[type=file], input[type=submit], input[type=radio] {
-            margin: 10px 0;
-        }
-        label {
-            margin: 10px 0;
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 20px 0;
         }
     </style>
 </head>
@@ -39,6 +35,9 @@
     <div class="container">
         <h1>Generated Summary</h1>
         <p>{{ summary }}</p>
+        {% if image_data %}
+        <img src="{{ image_data }}" alt="Generated Image">
+        {% endif %}
         <a href="/">Try another file</a>
     </div>
 </body>

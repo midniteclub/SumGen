@@ -27,13 +27,12 @@
             display: flex;
             flex-direction: column;
         }
-        input[type=file], input[type=submit], input[type=radio] {
+        input[type=file], input[type=submit], input[type=radio], input[type=checkbox] {
             margin: 10px 0;
         }
         label {
             margin: 10px 0;
         }
-        /* Spinner Styles */
         .spinner {
             display: none;
             border: 5px solid #f3f3f3;
@@ -55,16 +54,23 @@
 </head>
 <body>
     <div class="container">
-        <h1>Upload .pdf, .docx, or .txt </h1>
+        <h1>Upload .pdf, .docx, or .txt</h1>
         {% if error %}
             <div style="color: red;">{{ error }}</div>
         {% endif %}
         <form id="uploadForm" action="/" method="post" enctype="multipart/form-data">
             <input type="file" name="file" accept=".pdf,.docx,.txt" required>
             <div>
+                <label><input type="radio" name="summary_model" value="xsum" checked> Tuned Model </label>
+                <label><input type="radio" name="summary_model" value="pegasus"> Pegasus Model </label>
+            </div>
+            <div>
                 <label><input type="radio" name="summary_length" value="short" checked> Short </label>
                 <label><input type="radio" name="summary_length" value="medium"> Medium </label>
                 <label><input type="radio" name="summary_length" value="long"> Long Summary </label>
+            </div>
+            <div>
+                <label><input type="checkbox" name="generate_image" value="yes"> Generate Image from Summary </label>
             </div>
             <input type="submit" value="Generate Summary">
         </form>
