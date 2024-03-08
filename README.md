@@ -1,6 +1,6 @@
 Text Summary Generator
 -----------------
-This Flask application allows users to upload PDF, DOCX, and TXT files and generates summaries of the contained text. Utilizing PyMuPDF for PDFs, python-docx for DOCX files, and basic Python for TXT files, Optional pegasus-xsum language model for summary generation, and newly added image generation using Stable Diffusion--the app provides an easy-to-use interface for extracting, summarizing, and visualizing text.
+This Flask application allows users to upload PDF, DOCX, and TXT files and generates summaries of the contained text. Utilizing PyMuPDF for PDFs, python-docx for DOCX files, and basic Python for TXT files, optional pegasus-xsum language model for summary generation, and newly added image generation using Stable Diffusion--the app provides an easy-to-use interface for extracting, summarizing, and visualizing text.
 
 Features
 
