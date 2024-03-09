@@ -46,6 +46,11 @@ or
 
 `python -m pip install -r requirements.txt` (if necessary)
 
+Then:
+
+`pip install torch torchvision torchaudio` (to complete package installations)
+
+
 4. Run the Application:
 
 `python app.py`
