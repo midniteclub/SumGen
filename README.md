@@ -48,7 +48,7 @@ or
 
 Then:
 
-`pip install torch torchvision torchaudio` (to complete package installations)
+`pip install torch torchvision torchaudio` ([or find your installation type](https://pytorch.org/))
 
 
 4. Run the Application:
