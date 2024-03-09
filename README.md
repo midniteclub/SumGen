@@ -51,14 +51,14 @@ Then:
 `pip install torch torchvision torchaudio` ([or find your installation type](https://pytorch.org/))
 
 If all else fails (manually install each):
-`pip install transformers`
-`pip install pymupdf`
-`pip install flask`
-`pip install python-docx`
-`pip install --upgrade diffusers[torch]`
-`pip install --upgrade diffusers[flax]`
-`pip install accelerate` (if possible)
-`pip install torch torchvision torchaudio`
+- `pip install transformers`
+- `pip install pymupdf`
+- `pip install flask`
+- `pip install python-docx`
+- `pip install --upgrade diffusers[torch]`
+- `pip install --upgrade diffusers[flax]`
+- `pip install accelerate` (if possible)
+- `pip install torch torchvision torchaudio`
 
 4. Run the Application:
 
