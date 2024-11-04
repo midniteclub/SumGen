@@ -13,6 +13,7 @@ Features
 
 ![image2](https://github.com/midniteclub/SumGen/assets/57697320/66264144-d6d6-4920-8c78-4e7395de4e52)
 
+MODEL HAS BEEN RECENTLY REMOVED DUE TO FLS STORAGE RESTRICTIONS
 
 INSTALLATION:
 -------------
